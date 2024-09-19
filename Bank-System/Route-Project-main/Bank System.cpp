@@ -1,10 +1,14 @@
-
 #include <iostream>
-#include "Bank System.h"
+#include "Client.h"
+#include "Employee.h"
+#include "Admin.h"
 using namespace std;
+
+
+
 int main()
 {
-    //====================================================== For Client Class======================================================
+    //========================== For Client Class====================================
     Client c;
     string name;
     string password;
@@ -23,18 +27,13 @@ int main()
     cin >> password;
     c.setPassword(password);
 
-
     cout << "Enter Client Balance: ";
     cin >> balance;
     c.setBalance(balance);
-    cout <<"+++++++++++++++++++++++++++++" <<endl;
 
+    c.Displayclientinfo();
 
-
-    // c.Displayclientinfo();
-
-
-    //====================================================== For Employee Class======================================================
+    //============================== For Employee Class=================================
     Employee e;
 
     double salary;
@@ -56,41 +55,31 @@ int main()
     cout << "Enter Employee Salary: ";
     cin >> salary;
     e.setSalary(salary);
-    cout <<"+++++++++++++++++++++++++++++" <<endl;
 
+    e.DisplayEmployeeinfo();
 
-
-    // e.DisplayEmployeeinfo();
-    //==================================================================Admin Class===========================================================
+    //===============================Admin Class====================================
 
     Admin a;
-
-
-
 
     cout << "Enter Admin Name: ";
     cin >> name;
     a.setName(name);
 
+
     cout << "Enter Admin ID: ";
     cin >> id;
     a.setId(id);
+
 
     cout << "Enter Admin Password: ";
     cin >> password;
     a.setPassword(password);
 
-
-
     cout << "Enter Admin Balance: ";
     cin >> balance;
     a.setSalary(balance);
 
-
-    c.Displayclientinfo();
-    cout << endl;
-    e.DisplayEmployeeinfo();
-    cout << endl;
     a.DisplayAdmininfo();
 
 
